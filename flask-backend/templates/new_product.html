@@ -1,0 +1,29 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Product</h1>
+        <form action="{{ url_for('create_product') }}" method="post">
+            <label for="name">Product Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="number">Product Number:</label><br>
+            <input type="text" id="number" name="number" required><br>
+            <label for="cost">Product Cost:</label><br>
+            <input type="text" id="cost" name="cost" required><br>
+            <label for="link">Product Link:</label><br>
+            <input type="text" id="link" name="link" required><br>
+            <label for="image">Product Image:</label><br>
+            <input type="text" id="image" name="image" required><br>
+            <input type="submit" value="Add Product">
+        </form>
+    </div>
+</body>
+</html>
+```
