@@ -1,0 +1,36 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Product Catalog</h1>
+    </header>
+    <main>
+        <div id="product-list">
+            {% for product in products %}
+                <div id="product-card">
+                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                    <h2>{{ product.name }}</h2>
+                    <p>Product Number: {{ product.number }}</p>
+                    <p>Cost: {{ product.cost }}</p>
+                    <a href="{{ product.link }}">Product Link</a>
+                    <button class="search-btn">Search</button>
+                    <button class="alt-search-btn">Alternative Search</button>
+                    <input type="checkbox" id="select-product" name="select-product" value="{{ product.id }}">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="100">
+                </div>
+            {% endfor %}
+        </div>
+        <button id="export-button">Export</button>
+    </main>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+```

@@ -1,0 +1,1 @@
+The file "flask-backend/database.db" is a SQLite database file. It doesn't contain code but is generated and populated with data through code in other files, such as Python scripts using SQLAlchemy. Therefore, it's not possible to generate code for this file. The database will be created and updated when the Python scripts using SQLAlchemy are run.
